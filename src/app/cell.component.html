@@ -1,0 +1,11 @@
+<div #container style="padding-top: 100%;" class="relative w-full" (click)="onSelect()">
+  <div style="text-shadow: 1px 1px 1px rgba(0, 0, 0, 0.1);"
+       class="absolute inset-0 flex items-center justify-center text-xl text-white bg-gray-300 shadow-inner rounded"
+       [class.bg-red-300]="hasConflict"
+       [class.bg-red-500]="hasConflict && sudokuValue"
+       [class.bg-teal-400]="isSelected"
+       [class.bg-blue-500]="!hasConflict && !isSelected && sudokuValue"
+       [class.bg-purple-500]="!sudokuValue && solutionValue">
+    {{solutionValue || sudokuValue || ''}}
+  </div>
+</div>
