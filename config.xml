@@ -1,6 +1,6 @@
 <?xml version='1.0' encoding='utf-8'?>
-<widget id="com.sadrasamadi.sudoku" version="0.0.1" xmlns="http://www.w3.org/ns/widgets" xmlns:cdv="http://cordova.apache.org/ns/1.0">
-    <name>Sudoku</name>
+<widget id="com.sadrasamadi.sudokusolver" version="0.0.1" xmlns="http://www.w3.org/ns/widgets" xmlns:cdv="http://cordova.apache.org/ns/1.0">
+    <name>Sudoku Solver</name>
     <description>Solving sudoku puzzle.</description>
     <author email="sadra.smd@gmail.com" href="https://sadrasamadi.github.io/">Sadra Samadi</author>
     <content src="index.html" />

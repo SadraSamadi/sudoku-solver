@@ -33,6 +33,8 @@ export class HomePage implements OnInit {
 
   public ngOnInit(): void {
     this.reset();
+    this.http.get<any>('https://sugoku.herokuapp.com/board?difficulty=hard')
+      .subscribe(res => this.sudoku = res.board);
   }
 
   public onSelect(rc: RowCol): void {
@@ -67,11 +69,12 @@ export class HomePage implements OnInit {
 
   private async solve(): Promise<void> {
     this.selected = null;
-    try {
-      this.solution = await this.solver.solve(this.sudoku);
+    let solution = await this.solver.solve(this.sudoku);
+    if (solution) {
+      this.solution = solution;
       this.cells.forEach(cell => !this.sudoku[cell.row][cell.col] && cell.animate());
-    } catch (e) {
-      let alert = await this.alert.create({header: 'Oops', message: 'Something went wrong!'});
+    } else {
+      let alert = await this.alert.create({header: 'Error', message: 'Solution not found!'});
       await alert.present();
     }
   }
@@ -86,8 +89,6 @@ export class HomePage implements OnInit {
     this.solution = null;
     this.conflict = null;
     this.sudoku = this.utility.empty();
-    this.http.get<any>('https://sugoku.herokuapp.com/board?difficulty=hard')
-      .subscribe(res => this.sudoku = res.board);
   }
 
 }

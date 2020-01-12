@@ -16,7 +16,7 @@ import {AppComponent} from './app.component';
     HttpClientModule,
     IonicModule.forRoot(),
     IonicStorageModule.forRoot({
-      name: 'my_app_db',
+      name: 'sudoku_solver_db',
       driverOrder: ['indexeddb', 'sqlite', 'websql']
     }),
     AppRoutingModule

@@ -1,5 +1,5 @@
 {
-  "name": "my-app",
+  "name": "sudoku-solver",
   "version": "0.0.1",
   "description": "Solving sudoku puzzle.",
   "private": true,
