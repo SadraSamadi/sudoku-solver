@@ -5,8 +5,6 @@ import {IonicModule} from '@ionic/angular';
 import {RouterModule, Routes} from '@angular/router';
 import {HomePage} from './home.page';
 import {CellComponent} from './cell.component';
-import {ToRowColPipe} from './to-row-col.pipe';
-import {IsRowColPipe} from './is-row-col.pipe';
 
 const routes: Routes = [
   {
@@ -24,9 +22,7 @@ const routes: Routes = [
   ],
   declarations: [
     HomePage,
-    CellComponent,
-    ToRowColPipe,
-    IsRowColPipe
+    CellComponent
   ]
 })
 export class HomePageModule {

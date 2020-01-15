@@ -2,6 +2,7 @@
   "name": "sudoku-solver",
   "version": "0.0.1",
   "description": "Solving sudoku puzzle.",
+  "author": "Sadra Samadi <sadra.smd@gmail.com> (https://sadrasamadi.github.io/)",
   "private": true,
   "scripts": {
     "serve": "ionic serve",

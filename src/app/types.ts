@@ -8,14 +8,6 @@ export interface RowCol {
 
 }
 
-export interface RegCel {
-
-  reg: number;
-
-  cel: number;
-
-}
-
 export interface Conflict {
 
   regs: number[];

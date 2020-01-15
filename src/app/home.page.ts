@@ -69,12 +69,13 @@ export class HomePage implements OnInit {
 
   private async solve(): Promise<void> {
     this.selected = null;
-    let solution = await this.solver.solve(this.sudoku);
+    let sudoku = this.utility.copy(this.sudoku);
+    let solution = await this.solver.solve(sudoku);
     if (solution) {
       this.solution = solution;
       this.cells.forEach(cell => !this.sudoku[cell.row][cell.col] && cell.animate());
     } else {
-      let alert = await this.alert.create({header: 'Error', message: 'Solution not found!'});
+      let alert = await this.alert.create({header: 'Failed', message: 'Solution not found!'});
       await alert.present();
     }
   }

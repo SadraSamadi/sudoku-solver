@@ -18,7 +18,7 @@ export class AppComponent implements OnInit {
   public ngOnInit(): void {
     this.platform.ready()
       .then(() => {
-        this.statusBar.styleDefault();
+        this.statusBar.backgroundColorByHexString('#3182ce');
         this.splashScreen.hide();
         this.platform.backButton.subscribe(() => {
           let app = navigator['app'];
