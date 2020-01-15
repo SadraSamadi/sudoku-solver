@@ -1,6 +1,5 @@
 import {Component, OnInit, QueryList, ViewChildren} from '@angular/core';
 import {AlertController, LoadingController} from '@ionic/angular';
-import {HttpClient} from '@angular/common/http';
 import {UtilityService} from './utility.service';
 import {SolverService} from './solver.service';
 import {CellComponent} from './cell.component';
@@ -27,14 +26,11 @@ export class HomePage implements OnInit {
   public constructor(public utility: UtilityService,
                      private loading: LoadingController,
                      private alert: AlertController,
-                     private solver: SolverService,
-                     private http: HttpClient) {
+                     private solver: SolverService) {
   }
 
   public ngOnInit(): void {
     this.reset();
-    this.http.get<any>('https://sugoku.herokuapp.com/board?difficulty=hard')
-      .subscribe(res => this.sudoku = res.board);
   }
 
   public onSelect(rc: RowCol): void {

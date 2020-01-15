@@ -2,11 +2,12 @@
   "name": "sudoku-solver",
   "version": "0.0.1",
   "description": "Solving sudoku puzzle.",
-  "author": "Sadra Samadi <sadra.smd@gmail.com> (https://sadrasamadi.github.io/)",
+  "author": "Sadra Samadi <samadi_s@live.com> (https://sadrasamadi.github.io/)",
   "private": true,
   "scripts": {
+    "req": "ionic cordova requirments android",
     "serve": "ionic serve",
-    "build": "ionic cordova build android --prod --release --buildConfig=build/build.json",
+    "build": "ionic cordova build android --prod --release --buildConfig=sign/build.json",
     "run": "ionic cordova run android --livereload --consolelogs"
   },
   "dependencies": {
